@@ -1,6 +1,6 @@
 # k8s-cluster
 
-The scope of this project is to provision and manage the underlying infrastructure for a demo K8s cluster on GCP using Terraform.
+The scope of this project is to provision and manage the underlying infrastructure for a custom K8s cluster on GCP, AWS and Azure using Terraform.
 
 This includes the provisioning of a custom VPC network with a regional subnet and a permissive ingress firewall rule.
 
