@@ -26,7 +26,7 @@ resource "google_compute_firewall" "vpc_firewall_rule" {
   }
 
   source_ranges = ["0.0.0.0/0"]
-  priority      = 65535
+  priority      = 65534
 }
 
 resource "google_compute_subnetwork" "vpc_subnet" {
