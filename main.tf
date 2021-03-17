@@ -17,6 +17,18 @@ provider "google" {
 
 }
 
+resource "google_compute_firewall" "vpc_firewall_rule" {
+  name    = "k8s-cluster-firewall-allow-all"
+  network = google_compute_network.vpc_network.id
+
+  allow {
+    protocol = "all"
+  }
+
+  source_ranges = ["0.0.0.0/0"]
+  priority      = 65535
+}
+
 resource "google_compute_subnetwork" "vpc_subnet" {
   name          = "k8s-cluster-subnet"
   ip_cidr_range = "10.2.0.0/16"
