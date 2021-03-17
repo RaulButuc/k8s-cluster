@@ -1,5 +1,5 @@
 *.tfstate
 *.backup
-.terraform/*
+.terraform
 .terraform.lock.hcl
 k8s-cluster.json
